@@ -5,6 +5,7 @@
 ---
 
 # Feedback form (svelte app)
+![image](https://user-images.githubusercontent.com/49568477/153577236-f76d0c22-3191-4289-8c56-1657942de3db.png)
 
 This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
 
