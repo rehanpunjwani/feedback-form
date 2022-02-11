@@ -1,4 +1,6 @@
 <script>
+import FeedbackForm from "./components/FeedbackForm.svelte";
+
 	import FeedbackList from "./components/FeedbackList.svelte";
 import FeedbackStats from "./components/FeedbackStats.svelte";
 	let feedback = [
@@ -24,11 +26,16 @@ const deleteFeedback=(e)=>{
 	const id = e.detail;
 	feedback = feedback.filter(item=>item.id!==id)
 }
+const addFeedback=(e)=>{
+	const newFeedback = e.detail;
+	feedback = [newFeedback, ...feedback]
+}
 </script>
 
 <main class="container">
-	<FeedbackStats count={count} average={average}/>
-<FeedbackList {feedback} on:delete-feedback={deleteFeedback} />
+	<FeedbackForm on:add-feedback={addFeedback} />
+	<FeedbackStats {average} {count}/>
+	<FeedbackList {feedback} on:delete-feedback={deleteFeedback} />
 </main>
 
 <style>
