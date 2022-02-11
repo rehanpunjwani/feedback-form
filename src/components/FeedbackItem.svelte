@@ -1,5 +1,5 @@
 <script>
-import Card from "./Card.svelte";
+import Card from "../ui/Card.svelte";
 export let item;
 </script>
 
